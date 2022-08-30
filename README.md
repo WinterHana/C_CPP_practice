@@ -1,2 +1,2 @@
 # C_CPP_pratice
-name is content
+2학기 대비 연습용입니다.
