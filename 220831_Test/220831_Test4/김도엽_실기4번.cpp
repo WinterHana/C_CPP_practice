@@ -40,12 +40,12 @@ Member::Member()
 }
 string Member::getID()
 {
-	return this->ID;
+	return ID;
 }
 
 string Member::getName()
 {
-	return this->nickname;
+	return nickname;
 }
 
 void Member::setName(string _name)
@@ -60,7 +60,7 @@ void Member::setGuildName(string _guildName)
 
 string Member::getGuildName()
 {
-	return this->guildName;
+	return guildName;
 }
 // 2. 길드
 class Guild
@@ -68,7 +68,7 @@ class Guild
 private:
 	string name;
 public:
-	vector<Member> Members;
+	vector<Member *> Members;
 	string getName();
 	Guild(string _name);
 };
@@ -80,18 +80,27 @@ Guild::Guild(string _name)
 
 string Guild::getName()
 {
-	return this->name;
+	return name;
 }
 
 int main()
 {
 	vector<Guild> guildList;
-	vector<Member> memberList;
+	vector<Member *> memberList;
 	int order;
 	string ID, name;
 
 	while (true)
 	{
+		/*
+		for (int i = 0; i < memberList.size(); i++)
+		{
+			string a = memberList[i]->getID(); cout << a << endl;
+			cout << " + " << endl;
+			string b = memberList[i]->getName(); cout << b << endl;
+		}
+		*/
+
 		cout << "명령 번호 / 아이디 / 닉네임 또는 길드명 /" << endl;
 		cin >> order;
 		switch (order)
@@ -99,8 +108,7 @@ int main()
 		case 1:
 		{
 			cin >> ID >> name;
-			Member member(ID, name);
-			memberList.push_back(member);
+			memberList.push_back(new Member(ID, name));
 			break;
 		}
 		case 2:
@@ -108,9 +116,9 @@ int main()
 			cin >> ID >> name;
 			for (int i = 0; i < memberList.size(); i++)
 			{
-				if (memberList[i].getID() == ID)
+				if (memberList[i]->getID() == ID)
 				{
-					memberList[i].setName(name);
+					memberList[i]->setName(name);
 				}
 			}
 			break;
@@ -120,35 +128,38 @@ int main()
 			cin >> ID >> name;
 			bool MemberFind = false;
 			bool GuildFind = false;
-			Member* member;
+			Member * member = nullptr;
+			// member가 있는지 확인하기
 			for (int k = 0; k < memberList.size(); k++)
 			{
-				if (memberList[k].getID() == ID)
+				if (memberList[k]->getID() == ID)
 				{
 					member = memberList[k];
 					MemberFind = true;
 					break;
 				}
 			}
-			
-			if (member.getName() == "none")
-			{
-				cout << "맴버를 찾지 못했습니다.";
-				break;
-			}
 
+			// member를 못찾았으면 탈출
+			if (MemberFind == false) break;
+
+			// 길드 찾기
 			for (int i = 0; i < guildList.size(); i++)
 			{
 				if (guildList[i].getName() == name)
 				{
+					member->setGuildName(name);
 					guildList[i].Members.push_back(member);
 					GuildFind = true;
 					break;
 				}
 			}
+
+			// 길드 못찾았으면 생성 후 넣기
 			if (GuildFind == false)
 			{
 				Guild guild(name);
+				member->setGuildName(name);
 				guild.Members.push_back(member);
 				guildList.push_back(guild);
 
@@ -173,7 +184,7 @@ int main()
 				{
 					for (int j = 0; j < guildList[i].Members.size(); j++)
 					{
-						cout << guildList[i].Members[j].getName() << endl;
+						cout << guildList[i].Members[j]->getName() << endl;
 					}
 				}
 				break;
@@ -185,9 +196,9 @@ int main()
 			cin >> ID;
 			for (int i = 0; i < memberList.size(); i++)
 			{
-				if (memberList[i].getID() == ID)
+				if (memberList[i]->getID() == ID)
 				{
-					cout << memberList[i].getGuildName() << endl;
+					cout << memberList[i]->getGuildName() << endl;
 					break;
 				}
 			}
