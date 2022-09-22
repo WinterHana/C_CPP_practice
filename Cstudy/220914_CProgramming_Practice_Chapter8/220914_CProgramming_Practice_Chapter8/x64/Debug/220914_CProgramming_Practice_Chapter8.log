@@ -1,0 +1,4 @@
+﻿  1.c
+C:\Project\C_CPP_practice\Cstudy\220914_CProgramming_Practice_Chapter8\220914_CProgramming_Practice_Chapter8\1.c(227,18): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Project\C_CPP_practice\Cstudy\220914_CProgramming_Practice_Chapter8\220914_CProgramming_Practice_Chapter8\1.c(228,23): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+  220914_CProgramming_Practice_Chapter8.vcxproj -> C:\Project\C_CPP_practice\Cstudy\220914_CProgramming_Practice_Chapter8\x64\Debug\220914_CProgramming_Practice_Chapter8.exe

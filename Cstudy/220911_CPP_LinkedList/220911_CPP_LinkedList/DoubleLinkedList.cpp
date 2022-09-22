@@ -2,6 +2,7 @@
 #include <string>
 
 using namespace std;
+
 /*
 typedef struct node {
 	Node* prev;
@@ -32,6 +33,7 @@ Node::Node(int _value, Node* _prev, Node* _next)
 	next = _next;
 }
 
+// 출력
 void printList(Node* _headNode)
 {
 	Node* node = _headNode->next;
@@ -79,53 +81,66 @@ void insertList(Node* _headNode, int _value)
 	node->next = newNode;
 }
 
-// 삭제 : 왜 안돼 시바;;
+// 삭제
 void deleteList(Node* _headNode, int _value)
 {
 	Node* node = _headNode->next;
-	while (node->next != _headNode)
+	while (node != _headNode)
 	{
 		if (node->value == _value)
 		{
-			(node->prev)->next = node->prev;
-			(node->next)->prev = node->next;
+			(node->prev)->next = node->next;
+			(node->next)->prev = node->prev;
+			delete node;
 			return;
 		}
 		node = node->next;
 	}
-	cout << "삭제할 노드가 없습니다.";
+	cout << "삭제할 노드가 없습니다." << endl;
 }
 int main()
 {
+	// 초기화 : 처음 헤드의 양 쪽은 헤드를 가리키도록 함
 	Node* head = new Node();
+	head->prev = head;
+	head->next = head;
+
 	int order;
 	int value;
+
+	// 출력판
 	while (true)
 	{
-		cout << "1. 삽입 2. 삭제 3. 출력 4. 끝내기" << endl;
+		cout << "=================================================" << endl;
+		cout << "1. 삽입 | 2. 삭제 | 3. 출력 | 다른 숫자 : 끝내기" << endl;
+		cout << "=================================================" << endl;
+		cout << "명령 번호 입력 : ";
 		cin >> order;
+		cout << "=================================================" << endl;
 		switch (order)
 		{
 		case 1:
+			cout << "삽입할 정수를 입력해주세요. : ";
 			cin >> value;
 			insertList(head, value);
-			break;
-		case 2:
-			cin >> value;
-			deleteList(head, value);
-			break;
-		case 3:
+			cout << "===현재 DoubleLinkedList입니다.===" << endl;
 			printList(head);
 			break;
-		case 4:
-			return 0;
+		case 2:
+			cout << "삭제할 정수를 입력해주세요. : ";
+			cin >> value;
+			deleteList(head, value);
+			cout << "===현재 DoubleLinkedList입니다.===" << endl;
+			printList(head);
+			break;
+		case 3:
+			cout << "===현재 DoubleLinkedList입니다.===" << endl;
+			printList(head);
+			break;
 		default:
-			cout << "잘못된 값을 입력했습니다." << endl;
+			cout << "프로그램을 종료합니다." << endl;
+			return 0;
+			break;
 		}
-
 	}
-
-	
-
-	return 0;
 }

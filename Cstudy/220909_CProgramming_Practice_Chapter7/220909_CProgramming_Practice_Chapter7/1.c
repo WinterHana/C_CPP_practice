@@ -1,7 +1,229 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+// 이차원 문제 6번
+void prt(int x[][5], int N);
+
+int main()
+{
+	int N;
+	int arr[20][5];
+	scanf("%d", &N);
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			scanf("%d", &arr[i][j]);
+		}
+	}
+	
+	prt(arr, N);
+
+	return 0;
+}
+
+void prt(int x[][5], int N)
+{
+	for (int i = N - 1; i >= 0; i--)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			printf("%d ", x[i][j]);
+		}
+		printf("\n");
+	}
+}
+// 이차원 문제 5번
+/*
+int arrsum(int x[], int S, int E);
+
+int main()
+{
+	int arr[100];
+	int N, S, E;
+	scanf("%d", &N); scanf("%d", &S); scanf("%d", &E);
+
+	for (int i = 0; i < N; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+
+	printf("%d", arrsum(arr, S, E));
+	return 0;
+}
+
+int arrsum(int x[], int S, int E)
+{
+	int sum = 0;
+	for (int i = S; i <= E; i++)
+	{
+		sum += x[i];
+	}
+	return sum;
+}
+*/
+// 이차원 문제 3번
+/*
+int main()
+{
+	int index;
+	char x[6][5] = { {'Z', 'E', 'R', 'O', '-'},
+		{'O', 'N', 'E', '-', '-'},
+		{'T', 'W', 'O', '-', '-'},
+		{'T', 'H', 'R', 'E', 'E'}, 
+		{'F', 'O', 'U', 'R', '-'},
+		{'F', 'I', 'V', 'E', '-'} 
+	};
+
+	for (int i = 0; i < 3; i++)
+	{
+		scanf("%d", &index);
+		for (int j = 0; j < 5; j++)
+		{
+			printf("%c", x[index][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+*/
+// 이차원 문제 2번
+/*
+int main()
+{
+	int arr[3][2];
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 2; j++)
+		{
+			scanf("%d", &arr[i][j]);
+		}
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d\n", arr[i][0] + arr[i][1]);
+	}
+
+	return 0;
+}
+*/
+// 이차원 문제 1번
+/*
+int main()
+{
+	int arr[3][3];
+	int sum = 0;
+
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			scanf("%d", &arr[i][j]);
+		}
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		sum += arr[i][i];
+	}
+
+	printf("%d", sum);
+
+	return 0;
+}
+*/
+// 문제 10번
+/*
+int main()
+{
+	int x[5], rank[5] = { 0 };
+	int* p, * q, * r;
+
+	for (p = x, r = rank; p < x + 5; p++)
+	{
+		scanf("%d", p);
+	}
+
+	for (p = x, r = rank; p < x + 5; p++, r++)
+	{
+		for (q = x; q < x + 5; q++)
+		{
+			if (*p < *q) (*r)++;
+		}
+	}
+
+	for (p = x, r = rank; p < x + 5; p++, r++)
+		printf("%d = r%d ", *p, *r + 1);
+
+	return 0;
+
+}
+*/
+// 문제 9번
+/*
+int main()
+{
+	int arr[5];
+	int tmp;
+	for (int i = 0; i < 5; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+
+	for (int j = 0; j < 4; j++)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				tmp = arr[i + 1];
+				arr[i + 1] = arr[i];
+				arr[i] = tmp;
+			}
+		}
+	}
+
+
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+
+	return 0;
+}
+*/
+// 문제 8번
+/*
+int main()
+{
+	int arr[5];
+	int tmp;
+	for (int i = 0; i < 5; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (arr[i] > arr[i + 1])
+		{
+			tmp = arr[i + 1];
+			arr[i + 1] = arr[i];
+			arr[i] = tmp;
+		}
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	
+}
+*/
 // 문제 7번
+/*
 int main() {
 	int x[10], in[10] = { 0 };
 	int cnt = 0;
@@ -71,6 +293,7 @@ int main(void)
 
 	return 0;
 }
+*/
 /*
 // 문제 6번
 int main(void)
