@@ -1,0 +1,11 @@
+﻿  1.c
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(29,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(32,15): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(33,15): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(27,7): warning C4101: 'result' :참조되지 않은 지역 변수입니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(27,21): warning C4101: 'pt' :참조되지 않은 지역 변수입니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(98,17): warning C4098: 'replaceWord': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(54,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(55,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\221109_CProgramming_Pracitce_MockExam_150\1.c(56,24): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  221109_CProgramming_Pracitce_MockExam_150.vcxproj -> C:\Project\C_CPP_practice\Cstudy\221109_CProgramming_Pracitce_MockExam_150\x64\Debug\221109_CProgramming_Pracitce_MockExam_150.exe

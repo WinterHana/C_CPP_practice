@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 // 문제 4-1
+/*
 int main()
 {
 	int a[10], b[10];						// 크기가 10인 배열 선언
@@ -40,8 +41,9 @@ int main()
 
 	return 0;
 }
+*/
 // 문제 4-2
-/*
+
 void descending(int* arr1, int* arr2, int n, int m);
 void ascending(int* arr1, int* arr2, int n, int m);
 
@@ -206,7 +208,7 @@ void ascending(int* arr1, int* arr2, int n, int m)
 	}
 	printf("\n");
 }
-*/
+
 // 문제 3-2
 /*
 void PRT(int n, char* p);
@@ -279,16 +281,17 @@ int main()
 	return 0;
 }
 // 최대 길이의 문자 출력, maxString, maxChar를 받아서 순회하며 출력할 것
-void PRT(int n, char* arr)					
+void PRT(int n, char* p)					
 {
 	// 첫 소문자 후 바로 '#'이 오면 출력이 안되서 do-while문으로 설정함
-	char* i = arr;
+	char* i = p;
 	do
 	{
 		printf("%c", *i);
 		i++;
-	}while (i < arr + n);
+	}while (i < p + n);
 }
+*/
 // 문제 2-2
 /*
 int passengerN(int N);
