@@ -7,6 +7,7 @@
 red orange red yellow green red blue purple yellow
 white black gray pink brown blush crimson garnet vermilion indigo
 */
+/*
 int splitWords(char str[], char* word[]);
 
 int main()
@@ -21,7 +22,6 @@ int main()
 	wordCountB = splitWords(strB, wordB);
 	
 	// printf("%d %d\n", wordCountA, wordCountB);
-	/*
 	for (i = 0; i < wordCountA; i++)
 	{
 		printf("%s\n", wordA[i]);
@@ -30,7 +30,7 @@ int main()
 	{
 		printf("%s\n", wordB[i]);
 	}
-	*/
+
 	for (i = 0; i < wordCountA; i++)
 	{
 		for (j = i + 1; j < wordCountA; j++)
@@ -42,13 +42,12 @@ int main()
 			}
 		}
 	}
-	/*
+
 	for (i = 0; i < wordCountA; i++)
 	{
 		printf("%s ", wordA[i]);
 	}
 	printf("\n");
-	*/
 
 	for (i = 0; i < wordCountA; i++)
 	{
@@ -79,6 +78,7 @@ int splitWords(char str[], char* word[])
 	}
 	return index;
 }
+*/
 // 巩力 4
 /*
 struct student {
@@ -294,13 +294,7 @@ void cal_sum(struct reserve* p, int N, struct tot_price* q)
 	}
 }
 */
-// 巩力 4
-/*
-int main()
-{
-	return 0; 
-}
-*/
+
 // 巩力 6
 /*
 I have a pen. I have an applepen. PPAP.
@@ -309,7 +303,7 @@ ki
 mouse
 sen
 */
-/*
+
 int main()
 {
 	char A[101];
@@ -371,7 +365,7 @@ int main()
 
 	return 0;
 }
-*/
+
 // 巩力 3
 /*
 red orange yellow green blue purple

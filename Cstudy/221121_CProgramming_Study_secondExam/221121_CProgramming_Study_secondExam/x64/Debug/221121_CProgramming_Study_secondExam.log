@@ -1,0 +1,7 @@
+﻿  1.c
+C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\221121_CProgramming_Study_secondExam\1.c(16,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\221121_CProgramming_Study_secondExam\1.c(18,20): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\221121_CProgramming_Study_secondExam\1.c(19,15): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\221121_CProgramming_Study_secondExam\1.c(20,15): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\221121_CProgramming_Study_secondExam\1.c(65,22): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  221121_CProgramming_Study_secondExam.vcxproj -> C:\Project\C_CPP_practice\Cstudy\221121_CProgramming_Study_secondExam\x64\Debug\221121_CProgramming_Study_secondExam.exe
