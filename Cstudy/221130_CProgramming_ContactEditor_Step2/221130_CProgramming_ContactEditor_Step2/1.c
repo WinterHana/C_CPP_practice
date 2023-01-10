@@ -63,12 +63,12 @@ int main()
 {
 	TEL** tel_list;
 	int max_num;						// 최대 회원수
-	int count = 0;						// 현재 연락처 개수
+	int count = 0, i;						// 현재 연락처 개수
 	int menu;
 	printf("Max_num:");
 	scanf("%d", &max_num);
 	tel_list = (TEL**)malloc(sizeof(TEL*) * max_num);
-
+	if (tel_list == NULL) return -1;
 	while (1) {
 		printMainMenu();				//메뉴 출력
 		scanf("%d", &menu);				//메뉴선택
@@ -86,6 +86,14 @@ int main()
 			findContactByBirth(tel_list, count);	//생일자 검색
 			break;
 		case 5:
+			for (i = 0; i < count; i++)
+			{
+				free(tel_list[i]->name);
+				free(tel_list[i]->phone);
+				free(tel_list[i]->birth);
+				free(tel_list[i]);
+			}
+			free(tel_list);
 			return 0;
 		default:
 			printf("error\n");
